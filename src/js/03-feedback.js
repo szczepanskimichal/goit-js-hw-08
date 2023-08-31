@@ -33,13 +33,11 @@ function localData(event) {
   data[event.target.name] = event.target.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(data));
 }
-
 function resetLocalSorage(event) {
   event.preventDefault();
   localStorage.clear();
   checkLocalStorage();
 }
-
 emailEl.addEventListener('input', throttle(localData, 1000));
 messageEl.addEventListener('input', throttle(localData, 1000));
 btnEl.addEventListener('click', resetLocalSorage);
