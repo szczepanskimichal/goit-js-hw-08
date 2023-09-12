@@ -1,4 +1,4 @@
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 // const btnEl = document.querySelector('button[type="submit"]');
 // const emailEl = document.querySelector('input[type="email"]');
@@ -76,7 +76,7 @@ window.addEventListener('load', () => {
 });
 
 // Ogranicz częstotliwość aktualizacji funkcji, aby uniknąć częstych aktualizacji w pamięci
-const zapiszStanFormularza = _.throttle(() => {
+const zapiszStanFormularza = throttle(() => {
   const aktualnyStan = {
     email: poleEmail.value,
     message: poleWiadomosci.value,
